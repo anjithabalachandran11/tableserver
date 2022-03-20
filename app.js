@@ -1,3 +1,4 @@
+const { handle } = require('express/lib/application')
 const mongoose = require('mongoose')
 const validator = require('validator') 
 
@@ -37,10 +38,10 @@ const Emplist = mongoose.model('Emplist',{
 
 const Empdetails = mongoose.model('Empdetails',{
     id : {
-        type : Number,
-        minLength : 4
+        type : mongoose.Schema.Types.ObjectId,
+        ref : Emplist
     },
-    emp_id : {
+    empid : {
         type : Number,
     },
     emp_name : {
@@ -62,59 +63,32 @@ module.exports = {
 
 }
 
+// Emplist.find().sort(emp_name).then((result)=>{
+//     console.log(result)
+// })
+// Empdetails.find({}).populate('id')
+// .exec((err,result)=>{
+//     console.log(result)
+// })
 
 // const newemplist = new Emplist({
-//     emp_id : 1008,
-//     emp_name : "Amal",
-//     password : "amal007",
-//     department : "SW",
+//     emp_id : 1012,
+//     emp_name : "Rahana",
+//     password : "rahana007",
+//     //emp_salary : 30000,
+//     department : "QA",
 //     emp_status : "INACTIVE"
 // }) 
 // const newempdetails = new Empdetails({
-//     id: 2008,
-//     emp_id : newemplist.emp_id,
+//     id: newemplist._id,
+//     empid : newemplist.emp_id,
 //     emp_name : newemplist.emp_name,
-//     age : 45,
-//     place : "eklm"
+//     age : 55,
+//     place : "KTM"
 
 // })
 // newempdetails.save()
 // newemplist.save()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
