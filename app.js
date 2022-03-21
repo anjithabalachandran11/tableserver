@@ -72,19 +72,19 @@ module.exports = {
 // })
 
 // const newemplist = new Emplist({
-//     emp_id : 1012,
-//     emp_name : "Rahana",
-//     password : "rahana007",
-//     //emp_salary : 30000,
-//     department : "QA",
+//     emp_id : 1007,
+//     emp_name : "Bincy",
+//     password : "bincy007",
+//     //emp_salary : 20000,
+//     department : "SW",
 //     emp_status : "INACTIVE"
 // }) 
 // const newempdetails = new Empdetails({
 //     id: newemplist._id,
 //     empid : newemplist.emp_id,
 //     emp_name : newemplist.emp_name,
-//     age : 55,
-//     place : "KTM"
+//     age : 53,
+//     place : "EKLM"
 
 // })
 // newempdetails.save()
